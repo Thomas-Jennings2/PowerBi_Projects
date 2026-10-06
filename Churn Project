@@ -1,0 +1,80 @@
+***Import Data 
+
+***Data Exploration
+Created two new measures: Number of Customers and Unique Customers. 
+Number of Customers = COUNT('Databel - Data'[Customer ID])
+Unique Customers = DISTINCTCOUNT('Databel - Data'[Customer ID])
+Then made two cards on a dashboard to show the result of the two new measures. Results were the same.
+
+*Calculating Churn
+Created new column called "Churned". This column changed the "Churn Label" column from yes or no, to yes = 1 and no = 0.
+Churned = IF('Databel - Data'[Churn Label] = "Yes", 1,0)
+A new measure was created to count the number of churned customers
+Number of Churned Customers = COUNT('Databel - Data'[Churned])
+Churn Rate = DIVIDE(
+    SUM('Databel - Data'[Churned]),
+    COUNTROWS('Databel - Data'),
+    0
+)*100
+
+*Visualise Churn Reason
+Created a bar chart of number of customers and churn reason to find the top 3 reasons for churn
+
+*Display Churn Reason by Category
+Churned on the y-axis and Churn Category on the x-axis. Display the values as a percentage 
+
+*Create a Map of churn rate
+churn rate, number of customers and number of churned customers all go to tooltip. Add State to the visual. Then change the colour of the bubbles using conditional formatting to show the highest churn rate by state
+
+*** Analyse Demographics 
+*Created a new column called Demographics. This used an IF statement to translate the age groups into lables Senior, Under 30 and Other.
+Demographics = 
+IF(
+'Databel - Data'[Age] >= 30,
+"Senior",
+IF(
+'Databel - Data'[Age] < 30,
+"Under 30",
+"Other"
+)
+)
+This measure didn't work but after inspecting the data closer, I realised that there were two Boolean columns labeled "Senior" and "Under 30" with values yes or no.
+After realising this, I made the following changes to the demographic measure:
+Demographics = IF('Databel - Data'[Senior]="Yes","Senior",If('Databel - Data'[Under 30]="Yes","Under 30","Other"))
+This change then provided me with a usable result.
+*Find the churn rate for the senior demographic.
+Produced a bar chart showing churn rate by demographic to show that seniors had the highest churn rate.
+
+*Age Bins
+created age bins (right click on age and select new group) with a size of 5. 
+Then created a line and stacked bar chart for number of customers, churn rate and age bins.
+
+*Inspecting Groups
+Change monthly charge column to currency. Produced a bar chart for average Monthly Charge by Number of Customers in Group.
+created a stacked column and line chart of customers by group, monthly charge and churn rate.
+
+*
+Contract Category = SWITCH('Databel - Data'[Contract Type], "One Year", "Yearly", "Two Year", "Yearly", "Monthly")
+Produced a multi card visual to show the churn rate difference between yearly and monthly contracts. 
+Made a clustered bar chart with churn rate, contract type and gender.
+
+* investigate how the Unlimited Data Plan influences the churn rate.
+create a new column Grouped Consumption that classifies the average monthly GB download in the following groups:
+
+Less than 5 GB.
+Between 5 and 10 GB.
+10 or more GB.
+
+new column: Grouped Consumption =
+IF(
+'Databel - Data'[Avg Monthly GB Download] < 5,
+"Less than 5 GB",
+IF(
+'Databel - Data'[Avg Monthly GB Download] < 10,
+"Between 5 and 10 GB",
+"10 or more GB"
+)
+)
+
+
+
