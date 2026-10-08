@@ -248,7 +248,8 @@ The main dashboard includes:
 - Number of Customers by Contract Type
 - Churn Rate by State map
 
----
+<img width="1324" height="744" alt="image" src="https://github.com/user-attachments/assets/35611f1d-c743-490b-b6ec-2bec8a53911c" />
+
 
 # 💡 Key Insights
 
@@ -325,7 +326,7 @@ Both measures were added to cards on the page.
 
 # 💡 Insights Dashboard
 
-A final page called **Insights** was created.
+Another page called **Insights** was created.
 
 The following visuals were added:
 
@@ -344,6 +345,17 @@ A line chart was also created showing:
 This page brings together the key findings from the previous analysis.
 
 ---
+
+# Final Dashboard 
+
+This final dashboard brings together the most prevalent details around the churn at Databel.
+- Churn rate
+- Number of customers
+- Churn rate by reason category
+- Churn rate by account type and length
+- Churn rate by state
+
+  
 
 # 🛠️ Tools Used
 
