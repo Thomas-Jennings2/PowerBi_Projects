@@ -248,8 +248,7 @@ The main dashboard includes:
 - Number of Customers by Contract Type
 - Churn Rate by State map
 
-<img width="1324" height="744" alt="image" src="https://github.com/user-attachments/assets/35611f1d-c743-490b-b6ec-2bec8a53911c" />
-
+---
 
 # 💡 Key Insights
 
@@ -355,7 +354,7 @@ This final dashboard brings together the most prevalent details around the churn
 - Churn rate by account type and length
 - Churn rate by state
 
-  
+  <img width="1324" height="744" alt="image" src="https://github.com/user-attachments/assets/35611f1d-c743-490b-b6ec-2bec8a53911c" />
 
 # 🛠️ Tools Used
 
