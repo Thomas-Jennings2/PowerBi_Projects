@@ -64,6 +64,8 @@ This was used to identify the most common reasons customers leave Databel.
 
 The analysis was then used to identify the **top three churn reasons**.
 
+<img width="918" height="592" alt="image" src="https://github.com/user-attachments/assets/4f3a9aef-f0d2-4ce5-80c6-d44077564a75" />
+
 ---
 
 # 🗂️ Churn Reason by Category
@@ -72,7 +74,7 @@ A visual was created using:
 
 - **Churn Category**
 - **Churned**
-- Percentage of total values
+- **Percentage of total values**
 
 This allows churn reasons to be analysed at a broader category level.
 
