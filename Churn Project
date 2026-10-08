@@ -75,6 +75,48 @@ IF(
 "10 or more GB"
 )
 )
+Next created a clustered bar chart to show churn rate by unlimited data plan and by the new groups from the column just created
 
+*Investigating the effect of the international plan
+Created a matrix showing int plan as column, int active as rows, churn rate as value and filter by state after changing the state data type to state or province. 
+This showed that 72% of customers in California that use international calls but don't have an international plan, churn.
+This means we could reduce the churn rate by suggesting these customers downgrade their plan to save them money and keep their business.
 
+*Improve customer service
+investigate three important topics related to customers: the payment method, the contract type, and how many months a person is a customer.
+Evaluated if the churn rate decreases over time. Created a Line chart using the account length and churn rate.
+Made a bar chart of number of customers per payment method.
 
+***Visualing Results
+First changed the canvas settings to have a width and height of 1640px and 960px, respectively.
+Churn rate card, number of customers card, number of churned customer card.
+Number of customers by churn reason, number of customers by contract type.
+map of churn rate by state.
+
+***Insight
+Which state has the highest churn rate for customers who have month-to-month contract types? 
+California 79%
+
+*Age Groups
+visuals: number of customers by age bin
+monthly charge by group
+account length slicer.
+applied filters on page to show churn rate of customers not in a group age 50 with an account 12 months or less. 50.67%
+
+*Customer service calls
+Create a new measure that calculates the average customer service calls per customer.
+Avg customer service calls = SUM('Databel - Data'[Customer Service Calls])/[Number of Customers]
+New page created two cards for total customer service calls and average customer service calls
+Also a scatter plot with y-axis of churn rate, x-axis of average account length, values payment method and legend of contract category.
+Now it is clear that the ones who call customer service often are also the ones who churn more than average. 
+
+*New page called Extra Charges 
+Created two new measures called Avg Extra International Charges and Avg Extra Data Charges
+Avg Extra Data Charges = SUM('Databel - Data'[Extra Data Charges])/[Number of Customers]
+Avg Extra International Charges = SUM('Databel - Data'[Extra International Charges])/[Number of Customers]
+added these two measures as cards to the page
+
+*Create new page called Insights
+copy all cards from extra charges and payment and contract onto this page
+Created a line chart with state on x-axis, avg service calls on y-axis, churn label as legend, include markers 
+copy the map of churn rate by state onto this page.
