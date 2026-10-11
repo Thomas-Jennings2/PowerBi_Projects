@@ -1,13 +1,13 @@
-# 📊 Databel Customer Churn Analysis
+# Databel Customer Churn Analysis
 <img width="1324" height="744" alt="image" src="https://github.com/user-attachments/assets/35611f1d-c743-490b-b6ec-2bec8a53911c" />
 
-## 📥 Importing The Data
+## Importing The Data
 
 The data used in this project was from a fictional company called Databel provided by Datacamp. This dataset was imported into Power BI for analysis of customer churn, demographics, contracts, customer service and additional charges.
 
 ---
 
-# 🔎 Data Exploration
+# Data Exploration
 
 ## Customer Measures
 
@@ -29,7 +29,7 @@ Both measures returned the same result, indicating that each customer ID appears
 
 ---
 
-# 📉 Calculating Churn
+# Calculating Churn
 
 A new column called `Churned` was created to convert the `Churn Label` values from "Yes"/"No" into binary values.
 
@@ -53,7 +53,7 @@ Churn Rate = DIVIDE( SUM('Databel - Data'[Churned]), COUNTROWS('Databel - Data')
 
 ---
 
-# 📊 Visualise Churn Reasons
+# Visualise Churn Reasons
 
 A bar chart was created using:
 
@@ -68,7 +68,7 @@ The analysis was then used to identify the **top three churn reasons**.
 
 ---
 
-# 🗂️ Churn Reason by Category
+# Churn Reason by Category
 
 A visual was created using:
 
@@ -80,7 +80,7 @@ This allows churn reasons to be analysed at a broader category level.
 
 ---
 
-# 🗺️ Churn Rate by State
+# Churn Rate by State
 
 A map visual was created to investigate differences in churn rates across states.
 
@@ -94,7 +94,7 @@ The following measures were added to the tooltip:
 
 ---
 
-# 👥 Analyse Demographics
+# Analyse Demographics
 
 ## Demographic Groups
 
@@ -119,7 +119,7 @@ This produced the expected demographic groups.
 
 ---
 
-## 📈 Churn Rate by Demographic
+## Churn Rate by Demographic
 
 A bar chart was created showing churn rate by demographic group.
 
@@ -127,7 +127,7 @@ The analysis showed that **senior customers had the highest churn rate**.
 
 ---
 
-# 🎂 Age Bins
+# Age Bins
 
 Age bins were created using Power BI's grouping functionality.
 
@@ -143,7 +143,7 @@ A line and stacked column chart was then created showing:
 
 ---
 
-# 💰 Investigating Customer Groups
+# Investigating Customer Groups
 
 The `Monthly Charge` column was changed to currency format.
 
@@ -157,7 +157,7 @@ A stacked column and line chart was also created to compare:
 
 ---
 
-# 📄 Contract Analysis
+# Contract Analysis
 
 A new column called `Contract Category` was created to group one-year and two-year contracts together.
 
@@ -178,7 +178,7 @@ A clustered bar chart was also created to compare churn rate by:
 
 ---
 
-# 📶 Unlimited Data Plan
+# Unlimited Data Plan
 
 The effect of unlimited data plans on churn was investigated.
 
@@ -202,7 +202,7 @@ A clustered bar chart was created to compare churn rate by:
 
 ---
 
-# 🌍 International Plan
+# International Plan
 
 A matrix was created using:
 
@@ -218,7 +218,7 @@ This could indicate an opportunity to review whether these customers are on suit
 
 ---
 
-# 📞 Customer Service
+# Customer Service
 
 Three areas were investigated:
 
@@ -232,7 +232,7 @@ A bar chart was also created to show the number of customers by payment method.
 
 ---
 
-# 📊 Final Dashboard
+# Final Dashboard
 
 The Power BI canvas was configured to:
 
@@ -250,7 +250,7 @@ The main dashboard includes:
 
 ---
 
-# 💡 Key Insights
+# Key Insights
 
 ## Highest Churn Rate by State
 
@@ -260,7 +260,7 @@ The main dashboard includes:
 
 ---
 
-# 👤 Age Groups
+# Age Groups
 
 The dashboard includes:
 
@@ -274,7 +274,7 @@ This customer segment had a churn rate of **50.67%**.
 
 ---
 
-# ☎️ Customer Service Calls
+# Customer Service Calls
 
 A new measure was created to calculate the average number of customer service calls per customer.
 
@@ -303,7 +303,7 @@ The analysis indicated that customers who contact customer service more frequent
 
 ---
 
-# 💳 Extra Charges
+# Extra Charges
 
 A new page called **Extra Charges** was created.
 
@@ -323,7 +323,7 @@ Both measures were added to cards on the page.
 
 ---
 
-# 💡 Insights Dashboard
+# Insights Dashboard
 
 Another page called **Insights** was created.
 
@@ -356,14 +356,43 @@ This final dashboard brings together the most prevalent details around the churn
 
   <img width="1324" height="744" alt="image" src="https://github.com/user-attachments/assets/35611f1d-c743-490b-b6ec-2bec8a53911c" />
 
-# 🛠️ Tools Used
+---
+
+# Results
+## 1. Overall Customer Churn
+
+- The overall churn rate is 26.86%, meaning approximately one in four customers has left Databel.
+- The dataset contains 6,687 customers, providing an overview of customer retention and churn patterns.
+
+## 2. Churn Details
+
+- Contract type: Customers on monthly contracts have a significantly higher churn rate than customers on yearly contracts, suggesting that longer-term contracts are associated with better customer retention.
+- Age groups: Customers aged 60–80 have the highest churn rates despite representing a smaller customer base than younger age groups.
+- Churn reasons: The top three churn categories are Competitor, Attitude, and Dissatisfaction, highlighting potential areas for improving customer retention and satisfaction.
+- Geographical differences: California has the fewest customers, with 63 customers, but the highest churn rate at 63.24%, making it a potential priority for further investigation.
+
+## 3. Business Recommendations
+Based on the findings, the following actions could help Databel reduce customer churn and improve customer retention.
+
+- Review competitor positioning: Since Competitor is the leading churn category, Databel should investigate competitor pricing, offers, and services to identify opportunities to strengthen its value proposition.
+- Improve customer satisfaction: Attitude and Dissatisfaction are among the leading churn reasons. Reviewing customer feedback and support interactions could help identify service issues and improve the overall customer experience.
+- Encourage long-term contracts: Customers on monthly contracts have a higher churn rate than those on yearly contracts. Offering incentives, discounts, or additional benefits for yearly subscriptions could encourage customers to commit for longer.
+- Target high-risk age groups: Customers aged 60–80 have the highest churn rates. Databel should investigate the reasons behind this pattern and consider targeted retention campaigns tailored to the needs of these customers.
+- Investigate churn in California: Despite having only 63 customers, California has a churn rate of 63.24%. Further analysis is needed to determine whether this is driven by pricing, competition, customer experience, or other regional factors before implementing targeted measures.
+
+## Conclusion
+The analysis highlights several opportunities for Databel to improve customer retention, particularly by addressing competitive pressure, improving customer satisfaction, and encouraging longer-term contracts. By investigating high-churn customer segments and prioritising retention efforts based on the findings, Databel can make more informed, data-driven decisions to help reduce churn and strengthen customer loyalty.
+
+---
+
+# Tools Used
 
 - **Microsoft Power BI**
 - **DAX**
 - **Power Query**
 - **GitHub**
 
-# 📌 Summary
+# Summary
 
 The analysis investigates customer churn across several dimensions, including:
 
